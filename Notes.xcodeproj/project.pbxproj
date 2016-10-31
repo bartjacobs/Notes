@@ -12,6 +12,7 @@
 		CC44B0AB1DC7B72C0055E7EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC44B0A31DC7B72C0055E7EA /* Assets.xcassets */; };
 		CC44B0AC1DC7B72C0055E7EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC44B0A51DC7B72C0055E7EA /* LaunchScreen.storyboard */; };
 		CC44B0AD1DC7B72C0055E7EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC44B0A61DC7B72C0055E7EA /* Main.storyboard */; };
+		CC44B0B11DC7B7E10055E7EA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44B0B01DC7B7E10055E7EA /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CC44B0A51DC7B72C0055E7EA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC44B0A61DC7B72C0055E7EA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CC44B0A81DC7B72C0055E7EA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC44B0B01DC7B7E10055E7EA /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				CC44B09F1DC7B72C0055E7EA /* View Controllers */,
 				CC44B0A41DC7B72C0055E7EA /* Storyboards */,
 				CC44B0A21DC7B72C0055E7EA /* Resources */,
+				CC44B0AF1DC7B7C40055E7EA /* Managers */,
 				CC44B0A71DC7B72C0055E7EA /* Supporting Files */,
 			);
 			path = Notes;
@@ -110,6 +113,14 @@
 				CC44B0A81DC7B72C0055E7EA /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC44B0AF1DC7B7C40055E7EA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CC44B0B01DC7B7E10055E7EA /* CoreDataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC44B0B11DC7B7E10055E7EA /* CoreDataManager.swift in Sources */,
 				CC44B0AA1DC7B72C0055E7EA /* ViewController.swift in Sources */,
 				CC44B0A91DC7B72C0055E7EA /* AppDelegate.swift in Sources */,
 			);
