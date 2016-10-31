@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - Properties
+
+    private let coreDataManager = CoreDataManager(modelName: "Notes")
+
     // MARK: - View Life Cycle
 
     override func viewDidLoad() {
