@@ -14,6 +14,7 @@
 		CC44B0B11DC7B7E10055E7EA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44B0B01DC7B7E10055E7EA /* CoreDataManager.swift */; };
 		CC44B0B51DC7B9CA0055E7EA /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC44B0B31DC7B9CA0055E7EA /* Notes.xcdatamodeld */; };
 		CC832CEB1DC9B680009DB35E /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC832CEA1DC9B680009DB35E /* NotesViewController.swift */; };
+		CC832CEE1DC9B706009DB35E /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC832CED1DC9B706009DB35E /* AddNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CC44B0B01DC7B7E10055E7EA /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		CC44B0B41DC7B9CA0055E7EA /* Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notes.xcdatamodel; sourceTree = "<group>"; };
 		CC832CEA1DC9B680009DB35E /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		CC832CED1DC9B706009DB35E /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				CC44B0A01DC7B72C0055E7EA /* Notes View Controller */,
+				CC832CEC1DC9B6E3009DB35E /* Add Note View Controller */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -132,6 +135,14 @@
 				CC44B0B31DC7B9CA0055E7EA /* Notes.xcdatamodeld */,
 			);
 			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		CC832CEC1DC9B6E3009DB35E /* Add Note View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC832CED1DC9B706009DB35E /* AddNoteViewController.swift */,
+			);
+			path = "Add Note View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 				CC832CEB1DC9B680009DB35E /* NotesViewController.swift in Sources */,
 				CC44B0B11DC7B7E10055E7EA /* CoreDataManager.swift in Sources */,
 				CC44B0A91DC7B72C0055E7EA /* AppDelegate.swift in Sources */,
+				CC832CEE1DC9B706009DB35E /* AddNoteViewController.swift in Sources */,
 				CC44B0B51DC7B9CA0055E7EA /* Notes.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

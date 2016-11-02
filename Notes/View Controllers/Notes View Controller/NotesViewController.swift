@@ -12,6 +12,10 @@ class NotesViewController: UIViewController {
 
     // MARK: - Properties
 
+    let segueAddNoteViewController = "SegueAddNoteViewController"
+
+    // MARK: -
+
     private let coreDataManager = CoreDataManager(modelName: "Notes")
 
     // MARK: - View Life Cycle
@@ -23,7 +27,11 @@ class NotesViewController: UIViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        if segue.identifier == segueAddNoteViewController {
+            if let destinationViewController = segue.destination as? AddNoteViewController {
+                destinationViewController.managedObjectContext = coreDataManager.managedObjectContext
+            }
+        }
     }
 
 }
