@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NotesViewController.swift
 //  Notes
 //
 //  Created by Bart Jacobs on 31/10/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NotesViewController: UIViewController {
 
     // MARK: - Properties
 
