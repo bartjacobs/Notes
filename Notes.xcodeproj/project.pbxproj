@@ -15,6 +15,7 @@
 		CC44B0B51DC7B9CA0055E7EA /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC44B0B31DC7B9CA0055E7EA /* Notes.xcdatamodeld */; };
 		CC832CEB1DC9B680009DB35E /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC832CEA1DC9B680009DB35E /* NotesViewController.swift */; };
 		CC832CEE1DC9B706009DB35E /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC832CED1DC9B706009DB35E /* AddNoteViewController.swift */; };
+		CCF53E141DC9ECAC00B4450B /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF53E131DC9ECAC00B4450B /* NoteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CC44B0B41DC7B9CA0055E7EA /* Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notes.xcdatamodel; sourceTree = "<group>"; };
 		CC832CEA1DC9B680009DB35E /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		CC832CED1DC9B706009DB35E /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		CCF53E131DC9ECAC00B4450B /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				CC832CEA1DC9B680009DB35E /* NotesViewController.swift */,
+				CCF53E121DC9EC8C00B4450B /* Table View Cells */,
 			);
 			path = "Notes View Controller";
 			sourceTree = "<group>";
@@ -143,6 +146,14 @@
 				CC832CED1DC9B706009DB35E /* AddNoteViewController.swift */,
 			);
 			path = "Add Note View Controller";
+			sourceTree = "<group>";
+		};
+		CCF53E121DC9EC8C00B4450B /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CCF53E131DC9ECAC00B4450B /* NoteTableViewCell.swift */,
+			);
+			path = "Table View Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +234,7 @@
 				CC44B0A91DC7B72C0055E7EA /* AppDelegate.swift in Sources */,
 				CC832CEE1DC9B706009DB35E /* AddNoteViewController.swift in Sources */,
 				CC44B0B51DC7B9CA0055E7EA /* Notes.xcdatamodeld in Sources */,
+				CCF53E141DC9ECAC00B4450B /* NoteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
