@@ -13,6 +13,7 @@ class NotesViewController: UIViewController {
 
     // MARK: - Properties
 
+    let segueNoteViewController = "SegueNoteViewController"
     let segueAddNoteViewController = "SegueAddNoteViewController"
 
     // MARK: -
@@ -64,6 +65,14 @@ class NotesViewController: UIViewController {
         if segue.identifier == segueAddNoteViewController {
             if let destinationViewController = segue.destination as? AddNoteViewController {
                 destinationViewController.managedObjectContext = coreDataManager.managedObjectContext
+            }
+
+        } else if segue.identifier == segueNoteViewController {
+            if let destinationViewController = segue.destination as? NoteViewController {
+                if let indexPath = tableView.indexPathForSelectedRow, let note = notes?[indexPath.row] {
+                    // Configure View Controller
+                    destinationViewController.note = note
+                }
             }
         }
     }
@@ -153,6 +162,14 @@ extension NotesViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
 
+    }
+
+}
+
+extension NotesViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
 }

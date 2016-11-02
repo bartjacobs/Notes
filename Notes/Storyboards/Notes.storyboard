@@ -38,7 +38,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZZ8-gx-F2m" id="3p6-4B-2wS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wen-mP-0pg">
@@ -76,6 +76,7 @@
                                                     <outlet property="contentsLabel" destination="zEk-E7-Gdy" id="tPi-qb-KZC"/>
                                                     <outlet property="titleLabel" destination="Wen-mP-0pg" id="smG-X3-wqo"/>
                                                     <outlet property="updatedAtLabel" destination="4q1-HV-FYB" id="zl0-Aa-Wor"/>
+                                                    <segue destination="Rvr-4l-UaU" kind="show" identifier="SegueNoteViewController" id="BGd-DM-nen"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -172,7 +173,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pR8-eB-XQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1488.8" y="195.6521739130435"/>
+            <point key="canvasLocation" x="1490" y="-125"/>
+        </scene>
+        <!--Note View Controller-->
+        <scene sceneID="lTD-0D-GnJ">
+            <objects>
+                <viewController id="Rvr-4l-UaU" customClass="NoteViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lSI-2b-NB5"/>
+                        <viewControllerLayoutGuide type="bottom" id="aDA-D4-3Pg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HNh-uY-hpz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aXF-xz-CWt">
+                                <rect key="frame" x="20" y="84" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hhX-J4-Ax3">
+                                <rect key="frame" x="16" y="122" width="343" height="525"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aXF-xz-CWt" firstAttribute="top" secondItem="lSI-2b-NB5" secondAttribute="bottom" constant="20" id="3pt-Zb-YLW"/>
+                            <constraint firstItem="hhX-J4-Ax3" firstAttribute="top" secondItem="aXF-xz-CWt" secondAttribute="bottom" constant="8" id="5lu-Il-Stj"/>
+                            <constraint firstItem="hhX-J4-Ax3" firstAttribute="leading" secondItem="HNh-uY-hpz" secondAttribute="leading" constant="16" id="Nsc-dy-NrA"/>
+                            <constraint firstItem="aDA-D4-3Pg" firstAttribute="top" secondItem="hhX-J4-Ax3" secondAttribute="bottom" constant="20" id="OY7-2m-4LA"/>
+                            <constraint firstAttribute="trailing" secondItem="hhX-J4-Ax3" secondAttribute="trailing" constant="16" id="kcN-M2-KJG"/>
+                            <constraint firstItem="aXF-xz-CWt" firstAttribute="leading" secondItem="HNh-uY-hpz" secondAttribute="leading" constant="20" id="lmS-jS-Ss0"/>
+                            <constraint firstAttribute="trailing" secondItem="aXF-xz-CWt" secondAttribute="trailing" constant="20" id="tAz-BK-CBM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentsTextView" destination="hhX-J4-Ax3" id="07A-fc-ubq"/>
+                        <outlet property="titleTextField" destination="aXF-xz-CWt" id="PRA-jc-vox"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pie-dH-It0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1488.8" y="538.38080959520244"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="doq-ba-aYm">
