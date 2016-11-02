@@ -26,7 +26,7 @@ class NotesViewController: UIViewController {
 
     private let estimatedRowHeight = CGFloat(44.0)
 
-    private let coreDataManager = CoreDataManager(modelName: "Notes")
+    fileprivate let coreDataManager = CoreDataManager(modelName: "Notes")
 
     // MARK: -
 
@@ -216,7 +216,13 @@ extension NotesViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else { return }
 
+        // Fetch Note
+        guard let note = notes?[indexPath.row] else { fatalError("Unexpected Index Path") }
+
+        // Delete Note
+        coreDataManager.managedObjectContext.delete(note)
     }
 
 }
