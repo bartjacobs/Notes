@@ -16,6 +16,7 @@
 		CC832CEB1DC9B680009DB35E /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC832CEA1DC9B680009DB35E /* NotesViewController.swift */; };
 		CC832CEE1DC9B706009DB35E /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC832CED1DC9B706009DB35E /* AddNoteViewController.swift */; };
 		CCF53E141DC9ECAC00B4450B /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF53E131DC9ECAC00B4450B /* NoteTableViewCell.swift */; };
+		CCF53E171DC9F80700B4450B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF53E161DC9F80700B4450B /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CC832CEA1DC9B680009DB35E /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		CC832CED1DC9B706009DB35E /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		CCF53E131DC9ECAC00B4450B /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		CCF53E161DC9F80700B4450B /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				CC44B0B31DC7B9CA0055E7EA /* Notes.xcdatamodeld */,
+				CCF53E151DC9F7EA00B4450B /* Extensions */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -154,6 +157,14 @@
 				CCF53E131DC9ECAC00B4450B /* NoteTableViewCell.swift */,
 			);
 			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		CCF53E151DC9F7EA00B4450B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CCF53E161DC9F80700B4450B /* Note.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +242,7 @@
 			files = (
 				CC832CEB1DC9B680009DB35E /* NotesViewController.swift in Sources */,
 				CC44B0B11DC7B7E10055E7EA /* CoreDataManager.swift in Sources */,
+				CCF53E171DC9F80700B4450B /* Note.swift in Sources */,
 				CC44B0A91DC7B72C0055E7EA /* AppDelegate.swift in Sources */,
 				CC832CEE1DC9B706009DB35E /* AddNoteViewController.swift in Sources */,
 				CC44B0B51DC7B9CA0055E7EA /* Notes.xcdatamodeld in Sources */,
