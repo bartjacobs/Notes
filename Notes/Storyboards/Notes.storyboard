@@ -38,7 +38,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZZ8-gx-F2m" id="3p6-4B-2wS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wen-mP-0pg">
@@ -194,24 +194,52 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hhX-J4-Ax3">
-                                <rect key="frame" x="16" y="122" width="343" height="525"/>
+                                <rect key="frame" x="16" y="166" width="343" height="481"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N04-fS-hcE">
+                                <rect key="frame" x="20" y="122" width="47.5" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYI-Zh-DcS">
+                                <rect key="frame" x="325" y="122" width="30" height="36"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <segue destination="rLh-nf-4AU" kind="show" identifier="SegueCategoriesViewController" id="muo-wq-zAR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWR-IJ-o9n">
+                                <rect key="frame" x="20" y="140" width="297" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aXF-xz-CWt" firstAttribute="top" secondItem="lSI-2b-NB5" secondAttribute="bottom" constant="20" id="3pt-Zb-YLW"/>
-                            <constraint firstItem="hhX-J4-Ax3" firstAttribute="top" secondItem="aXF-xz-CWt" secondAttribute="bottom" constant="8" id="5lu-Il-Stj"/>
+                            <constraint firstItem="hhX-J4-Ax3" firstAttribute="top" secondItem="iWR-IJ-o9n" secondAttribute="bottom" constant="8" id="EmF-pc-8Ih"/>
+                            <constraint firstItem="N04-fS-hcE" firstAttribute="top" secondItem="aXF-xz-CWt" secondAttribute="bottom" constant="8" id="FWi-1a-scs"/>
                             <constraint firstItem="hhX-J4-Ax3" firstAttribute="leading" secondItem="HNh-uY-hpz" secondAttribute="leading" constant="16" id="Nsc-dy-NrA"/>
                             <constraint firstItem="aDA-D4-3Pg" firstAttribute="top" secondItem="hhX-J4-Ax3" secondAttribute="bottom" constant="20" id="OY7-2m-4LA"/>
+                            <constraint firstItem="HYI-Zh-DcS" firstAttribute="leading" secondItem="iWR-IJ-o9n" secondAttribute="trailing" constant="8" id="Oka-AJ-DRV"/>
+                            <constraint firstItem="N04-fS-hcE" firstAttribute="leading" secondItem="HNh-uY-hpz" secondAttribute="leading" constant="20" id="Ujz-JT-FNH"/>
+                            <constraint firstItem="HYI-Zh-DcS" firstAttribute="bottom" secondItem="iWR-IJ-o9n" secondAttribute="bottom" id="Zge-AO-EwU"/>
+                            <constraint firstAttribute="trailing" secondItem="HYI-Zh-DcS" secondAttribute="trailing" constant="20" id="gB4-Ne-nqT"/>
+                            <constraint firstItem="iWR-IJ-o9n" firstAttribute="leading" secondItem="HNh-uY-hpz" secondAttribute="leading" constant="20" id="jd2-Ks-KCe"/>
                             <constraint firstAttribute="trailing" secondItem="hhX-J4-Ax3" secondAttribute="trailing" constant="16" id="kcN-M2-KJG"/>
                             <constraint firstItem="aXF-xz-CWt" firstAttribute="leading" secondItem="HNh-uY-hpz" secondAttribute="leading" constant="20" id="lmS-jS-Ss0"/>
                             <constraint firstAttribute="trailing" secondItem="aXF-xz-CWt" secondAttribute="trailing" constant="20" id="tAz-BK-CBM"/>
+                            <constraint firstItem="iWR-IJ-o9n" firstAttribute="top" secondItem="N04-fS-hcE" secondAttribute="bottom" constant="4" id="wT0-mU-nHy"/>
+                            <constraint firstItem="HYI-Zh-DcS" firstAttribute="top" secondItem="aXF-xz-CWt" secondAttribute="bottom" constant="8" id="yjB-fR-asy"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categoryLabel" destination="iWR-IJ-o9n" id="6Qu-Ca-Rqg"/>
                         <outlet property="contentsTextView" destination="hhX-J4-Ax3" id="07A-fc-ubq"/>
                         <outlet property="titleTextField" destination="aXF-xz-CWt" id="PRA-jc-vox"/>
                     </connections>
@@ -219,6 +247,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pie-dH-It0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1488.8" y="538.38080959520244"/>
+        </scene>
+        <!--Categories-->
+        <scene sceneID="rMG-Cc-USp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Categories" id="rLh-nf-4AU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOM-Rg-QML" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2136" y="538"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="doq-ba-aYm">

@@ -12,6 +12,11 @@ class NoteViewController: UIViewController {
 
     // MARK: - Properties
 
+    let segueCategoriesViewController = "SegueCategoriesViewController"
+
+    // MARK: -
+    
+    @IBOutlet var categoryLabel: UILabel!
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var contentsTextView: UITextView!
 
@@ -44,17 +49,28 @@ class NoteViewController: UIViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == segueCategoriesViewController else { return }
 
+        if let destinationViewController = segue.destination as? CategoriesViewController {
+            // Configure Destination View Controller
+            destinationViewController.managedObjectContext = note?.managedObjectContext
+        }
     }
 
     // MARK: - View Methods
 
     fileprivate func setupView() {
+        setupCategoryLabel()
         setupTitleTextField()
         setupContentsTextView()
     }
 
     // MARK: -
+
+    private func setupCategoryLabel() {
+        // Configure Title Text Field
+        categoryLabel.text = note?.category?.name ?? "No Category"
+    }
 
     private func setupTitleTextField() {
         // Configure Title Text Field
