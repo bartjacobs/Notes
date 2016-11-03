@@ -77,7 +77,10 @@ class CategoriesViewController: UIViewController {
             }
 
         } else if segue.identifier == segueCategoryViewController {
-            if let destinationViewController = segue.destination as? CategoryViewController, let indexPath = tableView.indexPathForSelectedRow {
+            if let destinationViewController = segue.destination as? CategoryViewController {
+                guard let cell = sender as? CategoryTableViewCell else { return }
+                guard let indexPath = tableView.indexPath(for: cell) else { return }
+
                 // Fetch Category
                 let category = fetchedResultsController.object(at: indexPath)
 
