@@ -12,6 +12,10 @@ class NoteTableViewCell: UITableViewCell {
 
     // MARK: - Properties
 
+    static let reuseIdentifier = "NoteTableViewCell"
+
+    // MARK: -
+
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var contentsLabel: UILabel!
     @IBOutlet var updatedAtLabel: UILabel!
