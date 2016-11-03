@@ -132,6 +132,41 @@ class NotesViewController: UIViewController {
 
 extension NotesViewController: NSFetchedResultsControllerDelegate {
 
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+
+        updateView()
+    }
+
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch (type) {
+        case .insert:
+            if let indexPath = newIndexPath {
+                tableView.insertRows(at: [indexPath], with: .fade)
+            }
+        case .delete:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        case .update:
+            if let indexPath = indexPath, let cell = tableView.cellForRow(at: indexPath) as? NoteTableViewCell {
+                configure(cell, at: indexPath)
+            }
+        case .move:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+
+            if let newIndexPath = newIndexPath {
+                tableView.insertRows(at: [newIndexPath], with: .fade)
+            }
+        }
+    }
+
 }
 
 extension NotesViewController: UITableViewDataSource {
@@ -150,6 +185,13 @@ extension NotesViewController: UITableViewDataSource {
         // Dequeue Reusable Cell
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "NoteTableViewCell", for: indexPath) as? NoteTableViewCell else { fatalError("Unexpected Index Path") }
 
+        // Configure Cell
+        configure(cell, at: indexPath)
+
+        return cell
+    }
+
+    func configure(_ cell: NoteTableViewCell, at indexPath: IndexPath) {
         // Fetch Note
         let note = fetchedResultsController.object(at: indexPath)
 
@@ -157,8 +199,6 @@ extension NotesViewController: UITableViewDataSource {
         cell.titleLabel.text = note.title
         cell.contentsLabel.text = note.contents
         cell.updatedAtLabel.text = updatedAtDateFormatter.string(from: note.updatedAtAsDate)
-
-        return cell
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
