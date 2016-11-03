@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NoteViewController: UIViewController {
 
@@ -32,6 +33,8 @@ class NoteViewController: UIViewController {
         title = "Edit Note"
 
         setupView()
+
+        setupNotificationHandling()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -52,8 +55,8 @@ class NoteViewController: UIViewController {
         guard segue.identifier == segueCategoriesViewController else { return }
 
         if let destinationViewController = segue.destination as? CategoriesViewController {
-            // Configure Destination View Controller
-            destinationViewController.managedObjectContext = note?.managedObjectContext
+            // Configure View Controller
+            destinationViewController.note = note
         }
     }
 
@@ -68,7 +71,11 @@ class NoteViewController: UIViewController {
     // MARK: -
 
     private func setupCategoryLabel() {
-        // Configure Title Text Field
+        updateCategoryLabel()
+    }
+
+    private func updateCategoryLabel() {
+        // Configure Category Text Field
         categoryLabel.text = note?.category?.name ?? "No Category"
     }
 
@@ -80,6 +87,24 @@ class NoteViewController: UIViewController {
     private func setupContentsTextView() {
         // Configure Contents Text View
         contentsTextView.text = note?.contents
+    }
+
+    // MARK: - Notification Handling
+
+    func managedObjectContextObjectsDidChange(_ notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        guard let updates = userInfo[NSUpdatedObjectsKey] as? Set<NSManagedObject> else { return }
+
+        if (updates.filter { return $0 == note }).count > 0 {
+            updateCategoryLabel()
+        }
+    }
+
+    // MARK: - Helper Methods
+
+    private func setupNotificationHandling() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(managedObjectContextObjectsDidChange(_:)), name: Notification.Name.NSManagedObjectContextObjectsDidChange, object: note?.managedObjectContext)
     }
     
 }

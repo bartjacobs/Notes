@@ -23,12 +23,12 @@ class CategoriesViewController: UIViewController {
 
     // MARK: -
 
-    var managedObjectContext: NSManagedObjectContext?
+    var note: Note?
 
     // MARK: -
 
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Category> = {
-        guard let managedObjectContext = self.managedObjectContext else {
+        guard let managedObjectContext = self.note?.managedObjectContext else {
             fatalError("No Managed Object Context Found")
         }
 
@@ -73,7 +73,7 @@ class CategoriesViewController: UIViewController {
         if segue.identifier == segueAddCategoryViewController {
             if let destinationViewController = segue.destination as? AddCategoryViewController {
                 // Configure Destination View Controller
-                destinationViewController.managedObjectContext = managedObjectContext
+                destinationViewController.managedObjectContext = note?.managedObjectContext
             }
 
         } else if segue.identifier == segueCategoryViewController {
@@ -198,6 +198,12 @@ extension CategoriesViewController: UITableViewDataSource {
 
         // Configure Cell
         cell.nameLabel.text = category.name
+
+        if note?.category == category {
+            cell.nameLabel.textColor = .bitterSweet()
+        } else {
+            cell.nameLabel.textColor = .black
+        }
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -207,7 +213,7 @@ extension CategoriesViewController: UITableViewDataSource {
         let category = fetchedResultsController.object(at: indexPath)
 
         // Delete Category
-        managedObjectContext?.delete(category)
+        note?.managedObjectContext?.delete(category)
     }
 
 }
@@ -216,6 +222,15 @@ extension CategoriesViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+
+        // Fetch Category
+        let category = fetchedResultsController.object(at: indexPath)
+
+        // Update Note
+        note?.category = category
+
+        // Pop View Controller From Navigation Stack
+        let _ = navigationController?.popViewController(animated: true)
     }
     
 }
