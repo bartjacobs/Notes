@@ -79,14 +79,12 @@ class NotesViewController: UIViewController {
             }
 
         } else if segue.identifier == segueNoteViewController {
-            if let destinationViewController = segue.destination as? NoteViewController {
-                if let indexPath = tableView.indexPathForSelectedRow {
-                    // Fetch Note
-                    let note = fetchedResultsController.object(at: indexPath)
+            if let destinationViewController = segue.destination as? NoteViewController, let indexPath = tableView.indexPathForSelectedRow {
+                // Fetch Note
+                let note = fetchedResultsController.object(at: indexPath)
 
-                    // Configure View Controller
-                    destinationViewController.note = note
-                }
+                // Configure View Controller
+                destinationViewController.note = note
             }
         }
     }
@@ -183,7 +181,9 @@ extension NotesViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Dequeue Reusable Cell
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NoteTableViewCell", for: indexPath) as? NoteTableViewCell else { fatalError("Unexpected Index Path") }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NoteTableViewCell.reuseIdentifier, for: indexPath) as? NoteTableViewCell else {
+            fatalError("Unexpected Index Path")
+        }
 
         // Configure Cell
         configure(cell, at: indexPath)
