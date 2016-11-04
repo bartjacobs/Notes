@@ -20,12 +20,12 @@
 		CC647E8F1DCB4E20003C872A /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC647E8E1DCB4E20003C872A /* CategoryViewController.swift */; };
 		CC647E921DCB4E4E003C872A /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC647E911DCB4E4E003C872A /* CategoriesViewController.swift */; };
 		CC647E951DCB4E95003C872A /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC647E941DCB4E95003C872A /* CategoryTableViewCell.swift */; };
-		CC647E981DCB4ED2003C872A /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC647E971DCB4ED2003C872A /* AddCategoryViewController.swift */; };
 		CC647E9A1DCB4EF6003C872A /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC647E991DCB4EF6003C872A /* Categories.storyboard */; };
 		CC647E9D1DCB59E5003C872A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC647E9C1DCB59E5003C872A /* UIViewController.swift */; };
 		CC647E9F1DCB6E3B003C872A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC647E9E1DCB6E3B003C872A /* UIColor.swift */; };
 		CC6C13E81DCC4A2A001FBC87 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6C13E71DCC4A2A001FBC87 /* ColorViewController.swift */; };
 		CC6C13EC1DCC82D4001FBC87 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6C13EB1DCC82D4001FBC87 /* Category.swift */; };
+		CC6C13EF1DCC9084001FBC87 /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6C13EE1DCC9084001FBC87 /* AddCategoryViewController.swift */; };
 		CCF53E171DC9F80700B4450B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF53E161DC9F80700B4450B /* Note.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,13 +45,13 @@
 		CC647E8E1DCB4E20003C872A /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		CC647E911DCB4E4E003C872A /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		CC647E941DCB4E95003C872A /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
-		CC647E971DCB4ED2003C872A /* AddCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
 		CC647E991DCB4EF6003C872A /* Categories.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		CC647E9C1DCB59E5003C872A /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		CC647E9E1DCB6E3B003C872A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		CC6C13E71DCC4A2A001FBC87 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		CC6C13E91DCC524C001FBC87 /* Notes 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Notes 2.xcdatamodel"; sourceTree = "<group>"; };
 		CC6C13EB1DCC82D4001FBC87 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		CC6C13EE1DCC9084001FBC87 /* AddCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
 		CCF53E161DC9F80700B4450B /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,7 +110,6 @@
 			children = (
 				CC647E7F1DCB4D2A003C872A /* Notes */,
 				CC647E8C1DCB4DC5003C872A /* Categories */,
-				CC647E961DCB4EB3003C872A /* Add Category View Controller */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -206,6 +205,7 @@
 			children = (
 				CC647E8D1DCB4DF6003C872A /* Category View Controller */,
 				CC647E901DCB4E2B003C872A /* Categories View Controller */,
+				CC6C13ED1DCC9084001FBC87 /* Add Category View Controller */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -236,15 +236,6 @@
 			path = "Table View Cells";
 			sourceTree = "<group>";
 		};
-		CC647E961DCB4EB3003C872A /* Add Category View Controller */ = {
-			isa = PBXGroup;
-			children = (
-				CC647E971DCB4ED2003C872A /* AddCategoryViewController.swift */,
-			);
-			name = "Add Category View Controller";
-			path = "Categories/Add Category View Controller";
-			sourceTree = "<group>";
-		};
 		CC647E9B1DCB59A9003C872A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +251,14 @@
 				CC6C13E71DCC4A2A001FBC87 /* ColorViewController.swift */,
 			);
 			path = "Color View Controller";
+			sourceTree = "<group>";
+		};
+		CC6C13ED1DCC9084001FBC87 /* Add Category View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC6C13EE1DCC9084001FBC87 /* AddCategoryViewController.swift */,
+			);
+			path = "Add Category View Controller";
 			sourceTree = "<group>";
 		};
 		CCF53E151DC9F7EA00B4450B /* Extensions */ = {
@@ -345,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6C13EF1DCC9084001FBC87 /* AddCategoryViewController.swift in Sources */,
 				CC44B0B11DC7B7E10055E7EA /* CoreDataManager.swift in Sources */,
 				CC647E9F1DCB6E3B003C872A /* UIColor.swift in Sources */,
 				CCF53E171DC9F80700B4450B /* Note.swift in Sources */,
@@ -356,7 +356,6 @@
 				CC647E951DCB4E95003C872A /* CategoryTableViewCell.swift in Sources */,
 				CC647E9D1DCB59E5003C872A /* UIViewController.swift in Sources */,
 				CC647E881DCB4D2A003C872A /* AddNoteViewController.swift in Sources */,
-				CC647E981DCB4ED2003C872A /* AddCategoryViewController.swift in Sources */,
 				CC647E891DCB4D2A003C872A /* NoteViewController.swift in Sources */,
 				CC647E8F1DCB4E20003C872A /* CategoryViewController.swift in Sources */,
 				CC6C13E81DCC4A2A001FBC87 /* ColorViewController.swift in Sources */,
