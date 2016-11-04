@@ -50,6 +50,7 @@ class CategoryViewController: UIViewController {
         if let destinationViewController = segue.destination as? ColorViewController {
             // Configure Destination View Controller
             destinationViewController.delegate = self
+            destinationViewController.color = category?.color ?? .white
         }
     }
 
@@ -67,6 +68,8 @@ class CategoryViewController: UIViewController {
     }
 
     fileprivate func updateColorView() {
+        // Configure Color View
+        colorView.backgroundColor = category?.color
     }
 
     // MARK: -
@@ -81,6 +84,8 @@ class CategoryViewController: UIViewController {
 extension CategoryViewController: ColorViewControllerDelegate {
 
     func controller(_ controller: ColorViewController, didPick color: UIColor) {
+        // Update Category
+        category?.color = color
 
         // Update View
         updateColorView()
