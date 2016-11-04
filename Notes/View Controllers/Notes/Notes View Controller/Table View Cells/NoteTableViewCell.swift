@@ -19,6 +19,7 @@ class NoteTableViewCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var contentsLabel: UILabel!
     @IBOutlet var updatedAtLabel: UILabel!
+    @IBOutlet var categoryColorView: UIView!
 
     // MARK: - Initialization
 
