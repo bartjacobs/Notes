@@ -25,6 +25,7 @@
 		CC647E9D1DCB59E5003C872A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC647E9C1DCB59E5003C872A /* UIViewController.swift */; };
 		CC647E9F1DCB6E3B003C872A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC647E9E1DCB6E3B003C872A /* UIColor.swift */; };
 		CC6C13E81DCC4A2A001FBC87 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6C13E71DCC4A2A001FBC87 /* ColorViewController.swift */; };
+		CC6C13EC1DCC82D4001FBC87 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6C13EB1DCC82D4001FBC87 /* Category.swift */; };
 		CCF53E171DC9F80700B4450B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF53E161DC9F80700B4450B /* Note.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		CC647E9E1DCB6E3B003C872A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		CC6C13E71DCC4A2A001FBC87 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		CC6C13E91DCC524C001FBC87 /* Notes 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Notes 2.xcdatamodel"; sourceTree = "<group>"; };
+		CC6C13EB1DCC82D4001FBC87 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CCF53E161DC9F80700B4450B /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				CCF53E161DC9F80700B4450B /* Note.swift */,
+				CC6C13EB1DCC82D4001FBC87 /* Category.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				CC647E8B1DCB4D2A003C872A /* NoteTableViewCell.swift in Sources */,
 				CC647E921DCB4E4E003C872A /* CategoriesViewController.swift in Sources */,
 				CC647E8A1DCB4D2A003C872A /* NotesViewController.swift in Sources */,
+				CC6C13EC1DCC82D4001FBC87 /* Category.swift in Sources */,
 				CC647E951DCB4E95003C872A /* CategoryTableViewCell.swift in Sources */,
 				CC647E9D1DCB59E5003C872A /* UIViewController.swift in Sources */,
 				CC647E881DCB4D2A003C872A /* AddNoteViewController.swift in Sources */,
