@@ -50,8 +50,6 @@ extension UIColor {
             return nil
         }
 
-        print(r, g, b, a)
-
         self.init(red: r, green: g, blue: b, alpha: a)
     }
 
