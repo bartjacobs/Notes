@@ -49,6 +49,7 @@
 		CC647E9C1DCB59E5003C872A /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		CC647E9E1DCB6E3B003C872A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		CC6C13E71DCC4A2A001FBC87 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		CC6C13E91DCC524C001FBC87 /* Notes 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Notes 2.xcdatamodel"; sourceTree = "<group>"; };
 		CCF53E161DC9F80700B4450B /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -506,9 +507,10 @@
 		CC44B0B31DC7B9CA0055E7EA /* Notes.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				CC6C13E91DCC524C001FBC87 /* Notes 2.xcdatamodel */,
 				CC44B0B41DC7B9CA0055E7EA /* Notes.xcdatamodel */,
 			);
-			currentVersion = CC44B0B41DC7B9CA0055E7EA /* Notes.xcdatamodel */;
+			currentVersion = CC6C13E91DCC524C001FBC87 /* Notes 2.xcdatamodel */;
 			path = Notes.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
