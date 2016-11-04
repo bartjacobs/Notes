@@ -111,6 +111,7 @@ class NotesViewController: UIViewController {
 
     private func setupTableView() {
         tableView.isHidden = true
+        tableView.separatorInset = .zero
         tableView.estimatedRowHeight = estimatedRowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
     }
