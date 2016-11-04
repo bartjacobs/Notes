@@ -12,6 +12,11 @@ class CategoryViewController: UIViewController {
 
     // MARK: - Properties
 
+    let segueColorViewController = "SegueColorViewController"
+
+    // MARK: -
+
+    @IBOutlet var colorView: UIView!
     @IBOutlet var nameTextField: UITextField!
 
     // MARK: -
@@ -37,10 +42,31 @@ class CategoryViewController: UIViewController {
         }
     }
 
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == segueColorViewController else { return }
+
+        if let destinationViewController = segue.destination as? ColorViewController {
+            // Configure Destination View Controller
+            destinationViewController.delegate = self
+        }
+    }
+
     // MARK: - View Methods
 
     fileprivate func setupView() {
+        setupColorView()
         setupNameTextField()
+    }
+
+    // MARK: -
+
+    private func setupColorView() {
+        updateColorView()
+    }
+
+    fileprivate func updateColorView() {
     }
 
     // MARK: -
@@ -48,6 +74,16 @@ class CategoryViewController: UIViewController {
     private func setupNameTextField() {
         // Configure Name Text Field
         nameTextField.text = category?.name
+    }
+
+}
+
+extension CategoryViewController: ColorViewControllerDelegate {
+
+    func controller(_ controller: ColorViewController, didPick color: UIColor) {
+
+        // Update View
+        updateColorView()
     }
 
 }
