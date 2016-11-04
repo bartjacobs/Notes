@@ -24,6 +24,7 @@
 		CC647E9A1DCB4EF6003C872A /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC647E991DCB4EF6003C872A /* Categories.storyboard */; };
 		CC647E9D1DCB59E5003C872A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC647E9C1DCB59E5003C872A /* UIViewController.swift */; };
 		CC647E9F1DCB6E3B003C872A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC647E9E1DCB6E3B003C872A /* UIColor.swift */; };
+		CC6C13E81DCC4A2A001FBC87 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6C13E71DCC4A2A001FBC87 /* ColorViewController.swift */; };
 		CCF53E171DC9F80700B4450B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF53E161DC9F80700B4450B /* Note.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		CC647E991DCB4EF6003C872A /* Categories.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		CC647E9C1DCB59E5003C872A /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		CC647E9E1DCB6E3B003C872A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		CC6C13E71DCC4A2A001FBC87 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		CCF53E161DC9F80700B4450B /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				CC647E8E1DCB4E20003C872A /* CategoryViewController.swift */,
+				CC6C13E61DCC4A07001FBC87 /* Color View Controller */,
 			);
 			path = "Category View Controller";
 			sourceTree = "<group>";
@@ -246,6 +249,14 @@
 				CC647E9C1DCB59E5003C872A /* UIViewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CC6C13E61DCC4A07001FBC87 /* Color View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC6C13E71DCC4A2A001FBC87 /* ColorViewController.swift */,
+			);
+			path = "Color View Controller";
 			sourceTree = "<group>";
 		};
 		CCF53E151DC9F7EA00B4450B /* Extensions */ = {
@@ -343,6 +354,7 @@
 				CC647E981DCB4ED2003C872A /* AddCategoryViewController.swift in Sources */,
 				CC647E891DCB4D2A003C872A /* NoteViewController.swift in Sources */,
 				CC647E8F1DCB4E20003C872A /* CategoryViewController.swift in Sources */,
+				CC6C13E81DCC4A2A001FBC87 /* ColorViewController.swift in Sources */,
 				CC44B0B51DC7B9CA0055E7EA /* Notes.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
