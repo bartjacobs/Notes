@@ -64,6 +64,9 @@ class CategoryViewController: UIViewController {
     // MARK: -
 
     private func setupColorView() {
+        // Configure Layer Color View
+        colorView.layer.cornerRadius = CGFloat(colorView.frame.width / 2.0)
+
         updateColorView()
     }
 

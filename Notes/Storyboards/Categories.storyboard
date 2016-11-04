@@ -35,7 +35,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iz9-EI-LZm" id="Emh-WH-mgC">
-                                            <rect key="frame" x="0.0" y="0.0" width="308" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="308" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akz-iR-U7d">
@@ -100,39 +100,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="70D-Cf-3hq">
-                                <rect key="frame" x="20" y="40" width="335" height="30"/>
+                                <rect key="frame" x="58" y="40" width="297" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lzf-JO-pyX">
-                                <rect key="frame" x="20" y="78" width="283" height="44"/>
+                                <rect key="frame" x="20" y="40" width="30" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="BGp-x7-2s3"/>
+                                    <constraint firstAttribute="height" constant="30" id="BGp-x7-2s3"/>
+                                    <constraint firstAttribute="width" constant="30" id="QxM-cm-P9g"/>
                                 </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gw6-KH-P33">
-                                <rect key="frame" x="311" y="78" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="ECm-bl-OC3"/>
-                                </constraints>
-                                <state key="normal" title="Edit"/>
                                 <connections>
-                                    <segue destination="SeP-jd-Qkp" kind="show" identifier="SegueColorViewController" id="Mj7-OA-iXF"/>
+                                    <outletCollection property="gestureRecognizers" destination="8y1-SZ-M4c" appends="YES" id="uW3-6e-Ikr"/>
                                 </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gw6-KH-P33" firstAttribute="height" secondItem="Lzf-JO-pyX" secondAttribute="height" id="6J9-Mb-rHn"/>
+                            <constraint firstItem="Lzf-JO-pyX" firstAttribute="top" secondItem="Ern-Be-BcE" secondAttribute="bottom" constant="20" id="GT3-8h-lfA"/>
                             <constraint firstItem="Lzf-JO-pyX" firstAttribute="leading" secondItem="2qS-pe-xYV" secondAttribute="leading" constant="20" id="GVp-2a-uf5"/>
-                            <constraint firstItem="70D-Cf-3hq" firstAttribute="leading" secondItem="2qS-pe-xYV" secondAttribute="leading" constant="20" id="K8i-he-Cz5"/>
-                            <constraint firstItem="gw6-KH-P33" firstAttribute="top" secondItem="70D-Cf-3hq" secondAttribute="bottom" constant="8" id="R6o-la-lcg"/>
+                            <constraint firstItem="70D-Cf-3hq" firstAttribute="leading" secondItem="Lzf-JO-pyX" secondAttribute="trailing" constant="8" id="X9D-dx-WNn"/>
                             <constraint firstItem="70D-Cf-3hq" firstAttribute="top" secondItem="Ern-Be-BcE" secondAttribute="bottom" constant="20" id="ZZx-CV-dqV"/>
-                            <constraint firstItem="Lzf-JO-pyX" firstAttribute="top" secondItem="70D-Cf-3hq" secondAttribute="bottom" constant="8" id="dhG-pz-HTu"/>
-                            <constraint firstItem="gw6-KH-P33" firstAttribute="leading" secondItem="Lzf-JO-pyX" secondAttribute="trailing" constant="8" id="iC4-fr-ajj"/>
-                            <constraint firstAttribute="trailing" secondItem="gw6-KH-P33" secondAttribute="trailing" constant="20" id="mgn-w5-ckw"/>
                             <constraint firstAttribute="trailing" secondItem="70D-Cf-3hq" secondAttribute="trailing" constant="20" id="xcf-Uo-27Z"/>
                         </constraints>
                     </view>
@@ -142,6 +133,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Izz-Xe-MHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8y1-SZ-M4c">
+                    <connections>
+                        <segue destination="SeP-jd-Qkp" kind="show" identifier="SegueColorViewController" id="VK7-0c-wL7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1308" y="254.12293853073464"/>
         </scene>
