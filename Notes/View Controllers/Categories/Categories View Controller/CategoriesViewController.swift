@@ -193,7 +193,7 @@ extension CategoriesViewController: UITableViewDataSource {
     }
 
     func configure(_ cell: CategoryTableViewCell, at indexPath: IndexPath) {
-        // Fetch Note
+        // Fetch Category
         let category = fetchedResultsController.object(at: indexPath)
 
         // Configure Cell
