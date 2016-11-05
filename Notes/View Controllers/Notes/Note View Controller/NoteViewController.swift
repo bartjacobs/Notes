@@ -80,11 +80,12 @@ class NoteViewController: UIViewController {
     // MARK: -
 
     private func setupTagsLabel() {
-
+        updateTagsLabel()
     }
 
     private func updateTagsLabel() {
-
+        // Configure Tags Label
+        tagsLabel.text = note?.alphabetizedTagsAsString ?? "No Tags"
     }
 
     private func setupCategoryLabel() {
@@ -113,6 +114,7 @@ class NoteViewController: UIViewController {
         guard let updates = userInfo[NSUpdatedObjectsKey] as? Set<NSManagedObject> else { return }
 
         if (updates.filter { return $0 == note }).count > 0 {
+            updateTagsLabel()
             updateCategoryLabel()
         }
     }
