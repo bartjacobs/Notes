@@ -13,10 +13,12 @@ class NoteViewController: UIViewController {
 
     // MARK: - Properties
 
+    let segueTagsViewController = "SegueTagsViewController"
     let segueCategoriesViewController = "SegueCategoriesViewController"
 
     // MARK: -
     
+    @IBOutlet var tagsLabel: UILabel!
     @IBOutlet var categoryLabel: UILabel!
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var contentsTextView: UITextView!
@@ -52,23 +54,38 @@ class NoteViewController: UIViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == segueCategoriesViewController else { return }
+        if segue.identifier == segueCategoriesViewController {
+            if let destinationViewController = segue.destination as? CategoriesViewController {
+                // Configure View Controller
+                destinationViewController.note = note
+            }
 
-        if let destinationViewController = segue.destination as? CategoriesViewController {
-            // Configure View Controller
-            destinationViewController.note = note
+        } else if segue.identifier == segueTagsViewController {
+            if let destinationViewController = segue.destination as? TagsViewController {
+                // Configure View Controller
+                destinationViewController.note = note
+            }
         }
     }
 
     // MARK: - View Methods
 
     fileprivate func setupView() {
+        setupTagsLabel()
         setupCategoryLabel()
         setupTitleTextField()
         setupContentsTextView()
     }
 
     // MARK: -
+
+    private func setupTagsLabel() {
+
+    }
+
+    private func updateTagsLabel() {
+
+    }
 
     private func setupCategoryLabel() {
         updateCategoryLabel()

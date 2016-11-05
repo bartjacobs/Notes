@@ -205,7 +205,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hhX-J4-Ax3">
-                                <rect key="frame" x="16" y="166" width="343" height="481"/>
+                                <rect key="frame" x="16" y="210" width="343" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -229,22 +229,49 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ym-7u-OWH">
+                                <rect key="frame" x="20" y="166" width="24.5" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6on-An-ZkS">
+                                <rect key="frame" x="325" y="166" width="30" height="36"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <segue destination="ghq-Q4-gYO" kind="show" identifier="SegueTagsViewController" id="UCo-hC-4fo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvf-4Z-EYI">
+                                <rect key="frame" x="20" y="184" width="297" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Fvf-4Z-EYI" firstAttribute="leading" secondItem="HNh-uY-hpz" secondAttribute="leading" constant="20" id="0LR-5c-MA7"/>
                             <constraint firstItem="aXF-xz-CWt" firstAttribute="top" secondItem="lSI-2b-NB5" secondAttribute="bottom" constant="20" id="3pt-Zb-YLW"/>
-                            <constraint firstItem="hhX-J4-Ax3" firstAttribute="top" secondItem="iWR-IJ-o9n" secondAttribute="bottom" constant="8" id="EmF-pc-8Ih"/>
+                            <constraint firstItem="1ym-7u-OWH" firstAttribute="top" secondItem="iWR-IJ-o9n" secondAttribute="bottom" constant="8" id="5Bh-h1-HjO"/>
+                            <constraint firstItem="6on-An-ZkS" firstAttribute="bottom" secondItem="Fvf-4Z-EYI" secondAttribute="bottom" id="Ayh-Jc-cls"/>
                             <constraint firstItem="N04-fS-hcE" firstAttribute="top" secondItem="aXF-xz-CWt" secondAttribute="bottom" constant="8" id="FWi-1a-scs"/>
                             <constraint firstItem="hhX-J4-Ax3" firstAttribute="leading" secondItem="HNh-uY-hpz" secondAttribute="leading" constant="16" id="Nsc-dy-NrA"/>
                             <constraint firstItem="aDA-D4-3Pg" firstAttribute="top" secondItem="hhX-J4-Ax3" secondAttribute="bottom" constant="20" id="OY7-2m-4LA"/>
                             <constraint firstItem="HYI-Zh-DcS" firstAttribute="leading" secondItem="iWR-IJ-o9n" secondAttribute="trailing" constant="8" id="Oka-AJ-DRV"/>
+                            <constraint firstItem="1ym-7u-OWH" firstAttribute="leading" secondItem="HNh-uY-hpz" secondAttribute="leading" constant="20" id="QWd-Wf-e37"/>
                             <constraint firstItem="N04-fS-hcE" firstAttribute="leading" secondItem="HNh-uY-hpz" secondAttribute="leading" constant="20" id="Ujz-JT-FNH"/>
+                            <constraint firstItem="Fvf-4Z-EYI" firstAttribute="top" secondItem="1ym-7u-OWH" secondAttribute="bottom" constant="4" id="WTT-Q0-e0m"/>
+                            <constraint firstItem="6on-An-ZkS" firstAttribute="top" secondItem="HYI-Zh-DcS" secondAttribute="bottom" constant="8" id="Z8d-UK-6S4"/>
                             <constraint firstItem="HYI-Zh-DcS" firstAttribute="bottom" secondItem="iWR-IJ-o9n" secondAttribute="bottom" id="Zge-AO-EwU"/>
+                            <constraint firstAttribute="trailing" secondItem="6on-An-ZkS" secondAttribute="trailing" constant="20" id="cbi-1V-pC7"/>
                             <constraint firstAttribute="trailing" secondItem="HYI-Zh-DcS" secondAttribute="trailing" constant="20" id="gB4-Ne-nqT"/>
+                            <constraint firstItem="hhX-J4-Ax3" firstAttribute="top" secondItem="Fvf-4Z-EYI" secondAttribute="bottom" constant="8" id="ii8-Wm-4Qx"/>
                             <constraint firstItem="iWR-IJ-o9n" firstAttribute="leading" secondItem="HNh-uY-hpz" secondAttribute="leading" constant="20" id="jd2-Ks-KCe"/>
                             <constraint firstAttribute="trailing" secondItem="hhX-J4-Ax3" secondAttribute="trailing" constant="16" id="kcN-M2-KJG"/>
                             <constraint firstItem="aXF-xz-CWt" firstAttribute="leading" secondItem="HNh-uY-hpz" secondAttribute="leading" constant="20" id="lmS-jS-Ss0"/>
                             <constraint firstAttribute="trailing" secondItem="aXF-xz-CWt" secondAttribute="trailing" constant="20" id="tAz-BK-CBM"/>
+                            <constraint firstItem="6on-An-ZkS" firstAttribute="leading" secondItem="Fvf-4Z-EYI" secondAttribute="trailing" constant="8" id="w2I-a6-2rF"/>
                             <constraint firstItem="iWR-IJ-o9n" firstAttribute="top" secondItem="N04-fS-hcE" secondAttribute="bottom" constant="4" id="wT0-mU-nHy"/>
                             <constraint firstItem="HYI-Zh-DcS" firstAttribute="top" secondItem="aXF-xz-CWt" secondAttribute="bottom" constant="8" id="yjB-fR-asy"/>
                         </constraints>
@@ -252,6 +279,7 @@
                     <connections>
                         <outlet property="categoryLabel" destination="iWR-IJ-o9n" id="6Qu-Ca-Rqg"/>
                         <outlet property="contentsTextView" destination="hhX-J4-Ax3" id="07A-fc-ubq"/>
+                        <outlet property="tagsLabel" destination="Fvf-4Z-EYI" id="Mz7-Ve-qZu"/>
                         <outlet property="titleTextField" destination="aXF-xz-CWt" id="PRA-jc-vox"/>
                     </connections>
                 </viewController>
@@ -265,7 +293,15 @@
                 <viewControllerPlaceholder storyboardName="Categories" id="rLh-nf-4AU" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOM-Rg-QML" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2136" y="538"/>
+            <point key="canvasLocation" x="2133" y="516"/>
+        </scene>
+        <!--Tags-->
+        <scene sceneID="tBJ-pd-v4S">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tags" id="ghq-Q4-gYO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eg6-nJ-fbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2134" y="561"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="doq-ba-aYm">
