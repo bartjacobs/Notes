@@ -16,6 +16,7 @@ class NoteTableViewCell: UITableViewCell {
 
     // MARK: -
 
+    @IBOutlet var tagsLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var contentsLabel: UILabel!
     @IBOutlet var updatedAtLabel: UILabel!
