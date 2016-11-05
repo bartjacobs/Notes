@@ -26,6 +26,10 @@
 		CC6C13E81DCC4A2A001FBC87 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6C13E71DCC4A2A001FBC87 /* ColorViewController.swift */; };
 		CC6C13EC1DCC82D4001FBC87 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6C13EB1DCC82D4001FBC87 /* Category.swift */; };
 		CC6C13EF1DCC9084001FBC87 /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6C13EE1DCC9084001FBC87 /* AddCategoryViewController.swift */; };
+		CCED55FA1DCDB98400D3E951 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED55F91DCDB98400D3E951 /* TagsViewController.swift */; };
+		CCED55FD1DCDB9E400D3E951 /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED55FC1DCDB9E400D3E951 /* TagViewController.swift */; };
+		CCED56001DCDBA4900D3E951 /* AddTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED55FF1DCDBA4900D3E951 /* AddTagViewController.swift */; };
+		CCED56031DCDBAF800D3E951 /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED56021DCDBAF800D3E951 /* TagTableViewCell.swift */; };
 		CCF53E171DC9F80700B4450B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF53E161DC9F80700B4450B /* Note.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +56,10 @@
 		CC6C13E91DCC524C001FBC87 /* Notes 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Notes 2.xcdatamodel"; sourceTree = "<group>"; };
 		CC6C13EB1DCC82D4001FBC87 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CC6C13EE1DCC9084001FBC87 /* AddCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
+		CCED55F91DCDB98400D3E951 /* TagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
+		CCED55FC1DCDB9E400D3E951 /* TagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
+		CCED55FF1DCDBA4900D3E951 /* AddTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTagViewController.swift; sourceTree = "<group>"; };
+		CCED56021DCDBAF800D3E951 /* TagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
 		CCF53E161DC9F80700B4450B /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +116,7 @@
 		CC44B09F1DC7B72C0055E7EA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CCED55F71DCDB92200D3E951 /* Tags */,
 				CC647E7F1DCB4D2A003C872A /* Notes */,
 				CC647E8C1DCB4DC5003C872A /* Categories */,
 			);
@@ -261,6 +270,49 @@
 			path = "Add Category View Controller";
 			sourceTree = "<group>";
 		};
+		CCED55F71DCDB92200D3E951 /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				CCED55FB1DCDB9CD00D3E951 /* Tag View Controller */,
+				CCED55F81DCDB96900D3E951 /* Tags View Controller */,
+				CCED55FE1DCDBA2B00D3E951 /* Add Tag View Controller */,
+			);
+			path = Tags;
+			sourceTree = "<group>";
+		};
+		CCED55F81DCDB96900D3E951 /* Tags View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCED55F91DCDB98400D3E951 /* TagsViewController.swift */,
+				CCED56011DCDBACD00D3E951 /* Table View Cells */,
+			);
+			path = "Tags View Controller";
+			sourceTree = "<group>";
+		};
+		CCED55FB1DCDB9CD00D3E951 /* Tag View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCED55FC1DCDB9E400D3E951 /* TagViewController.swift */,
+			);
+			path = "Tag View Controller";
+			sourceTree = "<group>";
+		};
+		CCED55FE1DCDBA2B00D3E951 /* Add Tag View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCED55FF1DCDBA4900D3E951 /* AddTagViewController.swift */,
+			);
+			path = "Add Tag View Controller";
+			sourceTree = "<group>";
+		};
+		CCED56011DCDBACD00D3E951 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CCED56021DCDBAF800D3E951 /* TagTableViewCell.swift */,
+			);
+			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
 		CCF53E151DC9F7EA00B4450B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +401,8 @@
 				CC647E9F1DCB6E3B003C872A /* UIColor.swift in Sources */,
 				CCF53E171DC9F80700B4450B /* Note.swift in Sources */,
 				CC44B0A91DC7B72C0055E7EA /* AppDelegate.swift in Sources */,
+				CCED55FA1DCDB98400D3E951 /* TagsViewController.swift in Sources */,
+				CCED56001DCDBA4900D3E951 /* AddTagViewController.swift in Sources */,
 				CC647E8B1DCB4D2A003C872A /* NoteTableViewCell.swift in Sources */,
 				CC647E921DCB4E4E003C872A /* CategoriesViewController.swift in Sources */,
 				CC647E8A1DCB4D2A003C872A /* NotesViewController.swift in Sources */,
@@ -358,6 +412,8 @@
 				CC647E881DCB4D2A003C872A /* AddNoteViewController.swift in Sources */,
 				CC647E891DCB4D2A003C872A /* NoteViewController.swift in Sources */,
 				CC647E8F1DCB4E20003C872A /* CategoryViewController.swift in Sources */,
+				CCED56031DCDBAF800D3E951 /* TagTableViewCell.swift in Sources */,
+				CCED55FD1DCDB9E400D3E951 /* TagViewController.swift in Sources */,
 				CC6C13E81DCC4A2A001FBC87 /* ColorViewController.swift in Sources */,
 				CC44B0B51DC7B9CA0055E7EA /* Notes.xcdatamodeld in Sources */,
 			);
