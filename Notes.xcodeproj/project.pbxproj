@@ -30,6 +30,7 @@
 		CCED55FD1DCDB9E400D3E951 /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED55FC1DCDB9E400D3E951 /* TagViewController.swift */; };
 		CCED56001DCDBA4900D3E951 /* AddTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED55FF1DCDBA4900D3E951 /* AddTagViewController.swift */; };
 		CCED56031DCDBAF800D3E951 /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCED56021DCDBAF800D3E951 /* TagTableViewCell.swift */; };
+		CCED56051DCDBD4100D3E951 /* Tags.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCED56041DCDBD4100D3E951 /* Tags.storyboard */; };
 		CCF53E171DC9F80700B4450B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF53E161DC9F80700B4450B /* Note.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		CCED55FC1DCDB9E400D3E951 /* TagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 		CCED55FF1DCDBA4900D3E951 /* AddTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTagViewController.swift; sourceTree = "<group>"; };
 		CCED56021DCDBAF800D3E951 /* TagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
+		CCED56041DCDBD4100D3E951 /* Tags.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tags.storyboard; sourceTree = "<group>"; };
 		CCF53E161DC9F80700B4450B /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +136,7 @@
 		CC44B0A41DC7B72C0055E7EA /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				CCED56041DCDBD4100D3E951 /* Tags.storyboard */,
 				CC44B0A61DC7B72C0055E7EA /* Notes.storyboard */,
 				CC647E991DCB4EF6003C872A /* Categories.storyboard */,
 				CC44B0A51DC7B72C0055E7EA /* LaunchScreen.storyboard */,
@@ -383,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC44B0AD1DC7B72C0055E7EA /* Notes.storyboard in Resources */,
+				CCED56051DCDBD4100D3E951 /* Tags.storyboard in Resources */,
 				CC44B0AB1DC7B72C0055E7EA /* Assets.xcassets in Resources */,
 				CC647E9A1DCB4EF6003C872A /* Categories.storyboard in Resources */,
 				CC44B0AC1DC7B72C0055E7EA /* LaunchScreen.storyboard in Resources */,
