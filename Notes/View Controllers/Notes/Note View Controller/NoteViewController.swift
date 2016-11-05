@@ -92,7 +92,7 @@ class NoteViewController: UIViewController {
     }
 
     private func updateCategoryLabel() {
-        // Configure Category Text Field
+        // Configure Category Label
         categoryLabel.text = note?.category?.name ?? "No Category"
     }
 
