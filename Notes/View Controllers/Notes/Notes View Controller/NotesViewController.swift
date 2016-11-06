@@ -38,7 +38,7 @@ class NotesViewController: UIViewController {
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: #keyPath(Note.updatedAt), ascending: false)]
 
         // Create Fetched Results Controller
-        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.coreDataManager.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.coreDataManager.mainManagedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
 
         // Configure Fetched Results Controller
         fetchedResultsController.delegate = self
@@ -75,7 +75,7 @@ class NotesViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueAddNoteViewController {
             if let destinationViewController = segue.destination as? AddNoteViewController {
-                destinationViewController.managedObjectContext = coreDataManager.managedObjectContext
+                destinationViewController.managedObjectContext = coreDataManager.mainManagedObjectContext
             }
 
         } else if segue.identifier == segueNoteViewController {
@@ -216,7 +216,7 @@ extension NotesViewController: UITableViewDataSource {
         let note = fetchedResultsController.object(at: indexPath)
 
         // Delete Note
-        coreDataManager.managedObjectContext.delete(note)
+        coreDataManager.mainManagedObjectContext.delete(note)
     }
 
 }
